@@ -145,7 +145,7 @@ do
     fi
 
 
-  c# check_mk local check piggyback
+  # check_mk local check piggyback
   echo ${EXITCODE}" "${VM}" - "$stats": "${STATUS}" transferred "${CHANGEDPERCENTAGE}" % of "${SIZE} ${UNIT}" in "${DURATIONSEC}" s, last_run: "${ENDDATE}"-"${ENDTIME} ${ERR} ${WARN}
 
 
