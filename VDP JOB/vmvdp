@@ -35,6 +35,10 @@ def check_vdp(item, param, info):
                 perfdata.append( ( "transferred", int(round(float(line[6]))) ) )
                 perfdata.append( ( "exec_time", int(line[12]) ) )
                 return (0, "OK - status is " + infotext, perfdata)
+             elif line[0] == "1":
+                perfdata.append( ( "transferred", int(round(float(line[6]))) ) )
+                perfdata.append( ( "exec_time", int(line[12]) ) )
+                return (1, "Warning - status is " + infotext, perfdata)
             else:
                 return (2, "CRITICAL - status is " + infotext, perfdata)
     return (3, "UNKNOWN - VDP %s not found in agent output" % item) 
